@@ -1,4 +1,4 @@
-$Id: README.txt,v 1.2 2006/04/24 19:41:14 skodak Exp $
+$Id: README.txt,v 1.2.2.1 2007/04/06 16:39:12 skodak Exp $
 
 ///////////////////////////////////////////////////////////////////////////
 //                                                                       //
@@ -78,16 +78,16 @@ Future:
     * I like eXe editor, I would like to improve Book in this direction ... ;-)
 
 CHANGELOG:
+== 1.1    - 2005/01/01 =======================================================
+    * compatible ONLY with 1.4.3 and later!
+    * removed some unused searching stuff
+    * fixed headers in print.php
 == 1.1RC1 - 2004/11/15 =======================================================
     * compatible ONLY with 1.4.2 and later !!!
     * added sesskey for enhanced security
     * navigation links do not enter hidden chapters
     * import - correct linking when slasharguments are off
     * removed coursefiles.php
-== 1.1    - 2005/01/01 =======================================================
-    * compatible ONLY with 1.4.3 and later!
-    * removed some unused searching stuff
-    * fixed headers in print.php
 == 1.2RC - 2005/07/13 ==========================================================
     * compatible with 1.5.1 + only
     * improved restore
@@ -95,7 +95,7 @@ CHANGELOG:
     * html editor for summary
     * fixed postgresql upgrade
     * no need to move language packs
-== 1.2 - 2006/03/11 ==========================================================
+== 1.2 - 2003/03/11 ==========================================================
     * removed 64kB page content limit in mysql
     * exit button now goes to course section anchor
     * chater title now in browser title bar
@@ -103,12 +103,5 @@ CHANGELOG:
     * during import chapters with names "*_sub.htm?" are imported as subchapters
     * deleting in import selection windows now works
     * last version before transition to 1.6
-== 1.3alpha - 2006/03/12 ======================================================
-    * compatible with 1.6dev only, use previous version for 1.5.x
-    * unicode upgrade supported - not much tested
-    * backup fixes - from Penny Leach, thanks!
-    * all languages converted to utf-8
-    * moved to contrib/book_16 directory
-    * added proper content encoding conversion during import
 
 skodak

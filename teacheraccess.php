@@ -1,4 +1,4 @@
-<?PHP // $Id: teacheraccess.php,v 1.1 2006/03/12 18:39:59 skodak Exp $
+<?PHP // $Id: teacheraccess.php,v 1.1.2.1 2007/04/06 16:39:13 skodak Exp $
 
 ///standard routine to allow only teachers in
 ///check of $id and $chapterid parameters

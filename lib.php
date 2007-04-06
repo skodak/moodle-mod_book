@@ -1,4 +1,4 @@
-<?PHP // $Id: lib.php,v 1.1 2006/03/12 18:39:59 skodak Exp $
+<?PHP // $Id: lib.php,v 1.1.2.1 2007/04/06 16:39:13 skodak Exp $
 
 define('NUM_NONE',     '0');
 define('NUM_NUMBERS',  '1');
@@ -258,9 +258,8 @@ function book_read_chapter($base, $ref) {
         $head = $matches[1];
         if (preg_match('/charset=([^"]+)/is', $head, $matches)) {
             $enc = $matches[1];
-            $textlib = textlib_get_instance();
-            $chapter->content = $textlib->convert($chapter->content, $enc, current_charset());
-            $chapter->title = $textlib->convert($chapter->title, $enc, current_charset());
+            $chapter->content = book_conv($enc, $chapter->content);
+            $chapter->title = book_conv($enc, $chapter->title);
         }
         if (preg_match_all('/<link[^>]+rel="stylesheet"[^>]*>/i', $head, $matches)) { //dlnsk extract links to css
             for($i=0; $i<count($matches[0]); $i++){
@@ -413,6 +412,37 @@ function book_relink($id, $bookid, $courseid) {
                 error('Could not update your book');
             }
         }
+    }
+}
+
+//=================================================
+// encoding conversion functions
+//=================================================
+
+function book_conv($in, $text) {
+    $in = strtolower($in);
+    if (!empty($CFG->unicode)) {
+        $out = 'utf-8';
+    } else {
+        $out = get_string('thischarset');
+    }
+    $out = strtolower($out);
+    if ($in == "windows-1250" && $out == "iso-8859-2") {
+        $conv = array (130=>"&#8218;", 132=>"&#8222;", 133=>"&#8230;", 134=>"&#8224;", 135=>"&#8225;", 137=>"&#8240;", 138=>"\xa9", 139=>"&#8249;", 140=>"\xa6", 141=>"\xab", 142=>"\xae", 143=>"\xac", 145=>"&#8216;", 146=>"&#8217;", 147=>"&#8220;", 148=>"&#8221;", 149=>"&#8226;", 150=>"&#8211;", 151=>"&#8212;", 153=>"&#8482;", 154=>"\xb9", 155=>"&#8250;", 156=>"\xb6", 157=>"\xbb", 158=>"\xbe", 159=>"\xbc", 161=>"\xb7", 165=>"\xa1", 166=>"&#166;", 169=>"&#169;", 171=>"&#171;", 172=>"&#172;", 174=>"&#174;", 177=>"&#177;", 181=>"&#181;", 182=>"&#182;", 183=>"&#183;", 185=>"\xb1", 187=>"&#187;", 188=>"\xa5", 190=>"\xb5");
+
+        $len = strlen($text);
+        $res = '';
+        for($i=0 ; $i<$len; $i++) {
+            $num = ord($text{$i});
+            if (array_key_exists($num, $conv)) {
+                $res .= $conv[$num];
+            } else {
+                $res .= $text{$i};
+            }
+        }
+        return $res;
+    } else {
+        return $text;
     }
 }
 

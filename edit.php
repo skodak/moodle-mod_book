@@ -1,4 +1,4 @@
-<?PHP // $Id: edit.php,v 1.1 2006/03/12 18:39:59 skodak Exp $
+<?PHP // $Id: edit.php,v 1.1.2.1 2007/04/06 16:39:12 skodak Exp $
 
 require_once('../../config.php');
 require_once('lib.php');

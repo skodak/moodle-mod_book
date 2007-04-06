@@ -1,4 +1,4 @@
-<?PHP // $Id: backuplib.php,v 1.1 2006/03/12 18:39:59 skodak Exp $
+<?PHP // $Id: backuplib.php,v 1.1.2.1 2007/04/06 16:39:12 skodak Exp $
     //This php script contains all the stuff to backup/restore
     //book mods
 
@@ -30,41 +30,24 @@
         ////Iterate over book table
         if ($books = get_records ('book', 'course', $preferences->backup_course, 'id')) {
             foreach ($books as $book) {
-                if (backup_mod_selected($preferences,'book',$book->id)) {
-                    $status = book_backup_one_mod($bf,$preferences,$book);
-                }
+                //Start mod
+                fwrite ($bf,start_tag('MOD',3,true));
+                //Print book data
+                fwrite ($bf,full_tag('ID',4,false,$book->id));
+                fwrite ($bf,full_tag('MODTYPE',4,false,'book'));
+                fwrite ($bf,full_tag('NAME',4,false,$book->name));
+                fwrite ($bf,full_tag('SUMMARY',4,false,$book->summary));
+                fwrite ($bf,full_tag('NUMBERING',4,false,$book->numbering));
+                fwrite ($bf,full_tag('DISABLEPRINTING',4,false,$book->disableprinting));
+                fwrite ($bf,full_tag('CUSTOMTITLES',4,false,$book->customtitles));
+                fwrite ($bf,full_tag('TIMECREATED',4,false,$book->timecreated));
+                fwrite ($bf,full_tag('TIMEMODIFIED',4,false,$book->timemodified));
+                //back up the chapters
+                $status = backup_book_chapters($bf,$preferences,$book);
+                //End mod
+                $status = fwrite($bf,end_tag('MOD',3,true));
             }
         }
-        return $status;
-    }
-
-    function book_backup_one_mod($bf,$preferences,$book) {
-
-        global $CFG;
-
-        if (is_numeric($book)) {
-            $book = get_record('book','id',$book);
-        }
-
-        $status = true;
-
-        //Start mod
-        fwrite ($bf,start_tag('MOD',3,true));
-        //Print book data
-        fwrite ($bf,full_tag('ID',4,false,$book->id));
-        fwrite ($bf,full_tag('MODTYPE',4,false,'book'));
-        fwrite ($bf,full_tag('NAME',4,false,$book->name));
-        fwrite ($bf,full_tag('SUMMARY',4,false,$book->summary));
-        fwrite ($bf,full_tag('NUMBERING',4,false,$book->numbering));
-        fwrite ($bf,full_tag('DISABLEPRINTING',4,false,$book->disableprinting));
-        fwrite ($bf,full_tag('CUSTOMTITLES',4,false,$book->customtitles));
-        fwrite ($bf,full_tag('TIMECREATED',4,false,$book->timecreated));
-        fwrite ($bf,full_tag('TIMEMODIFIED',4,false,$book->timemodified));
-        //back up the chapters
-        $status = backup_book_chapters($bf,$preferences,$book);
-        //End mod
-        $status = fwrite($bf,end_tag('MOD',3,true));
-
         return $status;
     }
 
@@ -127,29 +110,12 @@
 
 
     ////Return an array of info (name,value)
-    function book_check_backup_mods($course,$user_data=false,$backup_unique_code,$instances=null) {
-
-        if (!empty($instances) && is_array($instances) && count($instances)) {
-            $info = array();
-            foreach ($instances as $id => $instance) {
-                $info += book_check_backup_mods_instances($instance,$backup_unique_code);
-            }
-            return $info;
-        }
-
+    function book_check_backup_mods($course,$user_data=false,$backup_unique_code) {
          //First the course data
          $info[0][0] = get_string('modulenameplural','book');
          $info[0][1] = count_records('book', 'course', $course);
 
          //No user data for books ;-)
-
-         return $info;
-    }
-
-    ////Return an array of info (name,value)
-    function book_check_backup_mods_instances($instance,$backup_unique_code) {
-         $info[$instance->id.'0'][0] = '<b>'.$instance->name.'</b>';
-         $info[$instance->id.'0'][1] = '';
 
          return $info;
     }

@@ -1,4 +1,4 @@
-<?PHP // $Id: restorelib.php,v 1.2 2006/03/29 06:21:56 skodak Exp $
+<?PHP // $Id: restorelib.php,v 1.2.2.1 2007/04/06 16:39:12 skodak Exp $
     //This php script contains all the stuff to backup/restore
     //book mods
 
@@ -53,9 +53,7 @@
             $newid = insert_record ('book',$book);
 
             //Do some output
-            if (!defined('RESTORE_SILENTLY')) {
-                echo '<ul><li>'.get_string('modulename','book').' "'.$book->name.'"<br>';
-            }
+            echo '<ul><li>'.get_string('modulename','book').' "'.$book->name.'"<br>';
             backup_flush(300);
 
             if ($newid) {
@@ -69,9 +67,7 @@
                 $status = false;
             }
             //Finalize ul
-            if (!defined('RESTORE_SILENTLY')) {
-                echo "</ul>";
-            }
+            echo "</ul>";
 
         } else {
             $status = false;
@@ -116,11 +112,9 @@
 
             //Do some output
             if (($i+1) % 50 == 0) {
-                if (!defined('RESTORE_SILENTLY')) {
-                    echo '.';
-                    if (($i+1) % 1000 == 0) {
-                        echo '<br>';
-                    }
+                echo '.';
+                if (($i+1) % 1000 == 0) {
+                    echo '<br>';
                 }
                 backup_flush(300);
             }
@@ -190,9 +184,7 @@
                 }
                 break;
             default:
-                if (!defined('RESTORE_SILENTLY')) {
-                    echo "action (".$log->module."-".$log->action.") unknown. Not restored<br>";                 //Debug
-                }
+                echo "action (".$log->module."-".$log->action.") unknow. Not restored<br>";                 //Debug
                 break;
         }
 
@@ -319,18 +311,14 @@
                     $book->summary = addslashes($result);
                     $status = update_record('book',$book);
                     if ($CFG->debug>7) {
-                        if (!defined('RESTORE_SILENTLY')) {
-                            echo '<br /><hr />'.htmlentities($content).'<br />changed to<br />'.htmlentities($result).'<hr /><br />';
-                        }
+                        echo '<br /><hr />'.htmlentities($content).'<br />changed to<br />'.htmlentities($result).'<hr /><br />';
                     }
                 }
                 //Do some output
                 if (($i+1) % 5 == 0) {
-                    if (!defined('RESTORE_SILENTLY')) {
-                        echo '.';
-                        if (($i+1) % 100 == 0) {
-                            echo '<br />';
-                        }
+                    echo '.';
+                    if (($i+1) % 100 == 0) {
+                        echo '<br />';
                     }
                     backup_flush(300);
                 }
@@ -355,18 +343,14 @@
                     $chapter->content = addslashes($result);
                     $status = update_record('book_chapters',$chapter);
                     if ($CFG->debug>7) {
-                        if (!defined('RESTORE_SILENTLY')) {
-                            echo '<br /><hr />'.htmlentities($content).'<br />changed to<br />'.htmlentities($result).'<hr /><br />';
-                        }
+                        echo '<br /><hr />'.htmlentities($content).'<br />changed to<br />'.htmlentities($result).'<hr /><br />';
                     }
                 }
                 //Do some output
                 if (($i+1) % 5 == 0) {
-                    if (!defined('RESTORE_SILENTLY')) {
-                        echo '.';
-                        if (($i+1) % 100 == 0) {
-                            echo '<br />';
-                        }
+                    echo '.';
+                    if (($i+1) % 100 == 0) {
+                        echo '<br />';
                     }
                     backup_flush(300);
                 }

@@ -1,4 +1,4 @@
-<?PHP // $Id: postgres7.php,v 1.1 2006/03/12 18:40:01 skodak Exp $
+<?PHP // $Id: postgres7.php,v 1.1.2.1 2007/04/06 16:39:14 skodak Exp $
 
 function book_upgrade($oldversion) {
 // This function does anything necessary to upgrade
