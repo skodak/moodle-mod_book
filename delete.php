@@ -1,4 +1,4 @@
-<?PHP // $Id: delete.php,v 1.2.10.1 2008/03/25 20:13:53 poltawski Exp $
+<?PHP // $Id: delete.php,v 1.2.10.2 2008/08/13 23:22:34 skodak Exp $
 
 require('teacheraccess.php'); //page only for teachers
 $confirm = optional_param('confirm', 0, PARAM_BOOL);

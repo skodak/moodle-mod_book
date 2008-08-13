@@ -1,4 +1,4 @@
-<?PHP // $Id: index.php,v 1.2.2.1 2008/03/25 20:13:54 poltawski Exp $
+<?PHP // $Id: index.php,v 1.2.2.2 2008/08/13 23:22:32 skodak Exp $
 
 /// This page lists all the instances of book in a particular course
 
