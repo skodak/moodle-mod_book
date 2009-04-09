@@ -1,4 +1,4 @@
-<?PHP // $Id: lib.php,v 1.2.2.4 2008/08/13 23:22:34 skodak Exp $
+<?PHP // $Id: lib.php,v 1.2.2.5 2009/04/09 09:31:50 skodak Exp $
 
 define('NUM_NONE',     '0');
 define('NUM_NUMBERS',  '1');
@@ -445,6 +445,14 @@ function book_relink($id, $bookid, $courseid) {
             }
         }
     }
+}
+
+/**
+ * Tells if files in moddata are trusted and can be served without XSS protection.
+ * @return bool true if file can be submitted by teacher only (trusted), false otherwise
+ */
+function book_is_moddata_trusted() {
+    return true;
 }
 
 ?>
