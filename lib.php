@@ -1,4 +1,4 @@
-<?PHP // $Id: lib.php,v 1.2.2.5 2009/04/09 09:31:50 skodak Exp $
+<?PHP // $Id: lib.php,v 1.2.2.6 2009/11/11 22:40:40 skodak Exp $
 
 define('NUM_NONE',     '0');
 define('NUM_NUMBERS',  '1');
@@ -165,6 +165,15 @@ function book_scale_used ($bookid,$scaleid) {
 function book_scale_used_anywhere($scaleid) {
     return false;
 }
+
+function book_get_view_actions() {
+    return array('view', 'view all', 'print');
+}
+
+function book_get_post_actions() {
+    return array('update');
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
 /// Any other book functions go here.  Each of them must have a name that
 /// starts with book_
