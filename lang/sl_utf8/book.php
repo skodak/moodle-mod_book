@@ -1,4 +1,4 @@
-<?PHP // $Id:$
+<?PHP // $Id$
       // Translation for Moodle 1.9.2
       // Translated by Mitja Podreka - Faculty of Arts, University of Ljubljana
 

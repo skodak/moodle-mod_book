@@ -1,4 +1,4 @@
-/* $Id: styles.php,v 1.1.2.2 2008/08/13 23:22:32 skodak Exp $*/
+/* $Id*/
 /* later should be defined in themes*/
 
 
@@ -44,7 +44,7 @@ img.bigicon {
 #mod-book-view div.faq {
   font-size: 0.7em;
 }
- 
+
 /* == TOC styles == */
 
 /* toc style NONE */

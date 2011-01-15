@@ -1,4 +1,4 @@
-<?PHP // $Id: lib.php,v 1.2.2.6 2009/11/11 22:40:40 skodak Exp $
+<?PHP // $Id$
 
 define('NUM_NONE',     '0');
 define('NUM_NUMBERS',  '1');

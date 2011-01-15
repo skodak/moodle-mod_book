@@ -1,4 +1,4 @@
-<?PHP // $Id: toc.php,v 1.3.2.1 2008/08/13 23:22:33 skodak Exp $
+<?PHP // $Id$
 
 defined('MOODLE_INTERNAL') or die('Direct access to this script is forbidden.');
 

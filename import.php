@@ -1,4 +1,4 @@
-<?PHP // $Id: import.php,v 1.3.2.2 2008/08/13 23:22:33 skodak Exp $
+<?PHP // $Id$
 
 require('../../config.php');
 require_once('lib.php');

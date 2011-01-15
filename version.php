@@ -1,4 +1,4 @@
-<?PHP // $Id: version.php,v 1.4.2.1 2008/08/13 23:22:33 skodak Exp $
+<?PHP // $Id$
 
 /////////////////////////////////////////////////////////////////////////////////
 ///  Called by moodle_needs_upgrading() and /admin/index.php

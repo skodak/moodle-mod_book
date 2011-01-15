@@ -1,4 +1,4 @@
-<?PHP // $Id: book.php,v 1.3.2.1 2010/02/25 16:27:12 andreabix Exp $
+<?PHP // $Id$
 
 $string['addafter'] = 'Aggiungi un nuovo capitolo.';
 $string['book:edit'] = 'Modifica capitoli';

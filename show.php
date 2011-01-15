@@ -1,4 +1,4 @@
-<?PHP // $Id: show.php,v 1.2.10.2 2008/08/17 13:05:44 skodak Exp $
+<?PHP // $Id$
 
 require('teacheraccess.php'); //page only for teachers
 

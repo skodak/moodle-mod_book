@@ -1,4 +1,4 @@
-<?PHP // $Id: print.php,v 1.2.2.1 2008/08/13 23:22:32 skodak Exp $
+<?PHP // $Id$
 
 require_once('../../config.php');
 require_once('lib.php');

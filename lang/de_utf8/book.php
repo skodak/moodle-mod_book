@@ -1,4 +1,4 @@
-<?PHP // $Id: book.php,v 1.1.10.2 2008/08/13 23:22:34 skodak Exp $
+<?PHP // $Id$
 
 $string['modulename'] = 'Buch';
 $string['modulenameplural'] = 'Bücher';
