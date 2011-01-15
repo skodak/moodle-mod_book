@@ -29,7 +29,7 @@ require_capability('mod/book:read', $context);
 
 $allowedit   = has_capability('mod/book:edit', $context);
 $allowimport = has_capability('mod/book:import', $context);
-$allowprint  = has_capability('mod/book:print', $context) and !$book->disableprinting;
+$allowprint  = (has_capability('mod/book:print', $context) and !$book->disableprinting);
 $allowexport = has_capability('mod/book:exportimscp', $context);
 $viewhidden  = has_capability('mod/book:viewhiddenchapters', $context);
 
