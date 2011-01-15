@@ -1,18 +1,11 @@
-$Id: README.txt,v 1.3.2.4 2009/11/11 22:50:54 skodak Exp $
+$Id$
 
 ///////////////////////////////////////////////////////////////////////////
 //                                                                       //
 // NOTICE OF COPYRIGHT                                                   //
 //                                                                       //
-// Moodle - Modular Object-Oriented Dynamic Learning Environment         //
-//          http://moodle.org                                            //
-//                                                                       //
-// Copyright (C) 1999-2004  Martin Dougiamas  http://dougiamas.com       //
-//                                                                       //
-///////////////////////////////////////////////////////////////////////////
-//                                                                       //
-// Book module original code                                             //
-// Copyright (C) 2004  Petr Skoda (info@skodak.org)                      //
+// Book module                                                           //
+// Copyright (C) 2004-2010  Petr Skoda (http://skodak.org)               //
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 //                                                                       //
@@ -42,7 +35,7 @@ Many ideas and code were taken from other Moodle modules and Moodle itself;-)
 Installation:
     * see http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
 
-List of features - version 1.5:
+List of features - version 1.9:
 
     * easy to use - new teachers can quickly create multipage study materials
     * two levels - only chapters and subchapters
@@ -119,6 +112,10 @@ CHANGELOG:
 == 1.5 2009/11/11 ============================================================
     * minor cleanup
     * new Slovenian language pack - thanks Mitja Podreka
-    * updated German Language pack - thanks Ralf Hilgenstock 
+    * updated German Language pack - thanks Ralf Hilgenstock
+== 1.9 2011/01/15 ============================================================
+    * fixed print icons
+    * implemented user outline
+    * fixed page title formatting
 
 skodak
