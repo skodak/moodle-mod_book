@@ -102,7 +102,7 @@ if ($mform->is_cancelled()) {
             $chapter->timecreated = time();
             $chapter->timemodified = time();
             echo "imsrc:".$chapter->importsrc;
-            if (($data->subchapter) || preg_match('/_sub\.htm/i', $chapter->importsrc)) { //if filename or directory starts with sub_* treat as subdirecotories
+            if ((!empty($data->subchapter)) || preg_match('/_sub\.htm/i', $chapter->importsrc)) { //if filename or directory starts with sub_* treat as subdirecotories
                 $chapter->subchapter = 1;
             } else {
                 $chapter->subchapter = 0;
