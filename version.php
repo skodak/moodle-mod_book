@@ -30,4 +30,4 @@ $module->requires  = 2010120700; // Requires this Moodle version
 $module->cron      = 0;          // Period for cron to check this module (secs)
 $module->component = 'mod_book'; // Full name of the plugin (used for diagnostics)
 
-$release           = "2.0 (20110908)"; // User-friendly version number
+$release           = "2.0 (20111008)"; // User-friendly version number
