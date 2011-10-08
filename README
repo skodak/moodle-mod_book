@@ -15,7 +15,7 @@ GNU General Public License for more details:
 http:www.gnu.org/copyleft/gpl.html
 
 
-Book module for Moodle - version 2.0rc
+Book module for Moodle - version 2.0
 ===============================================================================
 Created by:
       Petr Skoda (skodak) - most of the coding & design
@@ -113,8 +113,10 @@ CHANGELOG:
 == 2.0rc ============================================================
     * backup fixed
     * print links open in new window
+== 2.0 ============================================================
+    * fixed chapter link backup and restore
 
-Known issues, please do not file tracker reports:
+Known issues, please do not file tracker reports, these will be reimplemented later in 2.1:
     * upgrade imscp export code (disabled for now)
     * upgrade import code (disabled for now)
     * legacy files were not upgraded yet
