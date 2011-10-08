@@ -115,8 +115,8 @@
         $result= preg_replace($buscar,'$@BOOKINDEX*$2@$',$result);
 
         //Link to book's specific chapter
-        $buscar="/(".$base."\/mod\/book\/view.php\?id\=)([0-9]+)\&chapterid\=([0-9]+)/";
-        $result= preg_replace($buscar,'$@BOOKCHAPTER*$2*$3@$',$result);
+        $buscar="/(".$base."\/mod\/book\/view.php\?id\=)([0-9]+)(&|&amp;)chapterid\=([0-9]+)/";
+        $result= preg_replace($buscar,'$@BOOKCHAPTER*$2*$4@$',$result);
 
         //Link to book's first chapter
         $buscar="/(".$base."\/mod\/book\/view.php\?id\=)([0-9]+)/";
