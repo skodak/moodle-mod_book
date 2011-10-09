@@ -24,8 +24,13 @@ Created by:
 Developed for Technical University of Liberec (Czech Republic).
 Many ideas and code were taken from other Moodle modules and Moodle itself
 
+Project page:
+    * https://github.com/skodak/moodle-mod_book
+    * http://moodle.org/plugins/view.php?plugin=mod_book
+
+
 Installation:
-    * see http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
+    * http://docs.moodle.org/20/en/Installing_contributed_modules_or_plugins
 
 List of features - version 2.0:
     * easy to use - new teachers can quickly create multipage study materials
@@ -116,7 +121,7 @@ CHANGELOG:
 == 2.0 ============================================================
     * fixed chapter link backup and restore
 
-Known issues, please do not file tracker reports, these will be reimplemented later in 2.1:
+Known issues, please do not file tracker reports, these are fixed in Book 2.1 only:
     * upgrade imscp export code (disabled for now)
     * upgrade import code (disabled for now)
     * legacy files were not upgraded yet
