@@ -5,7 +5,7 @@ $Id$
 // NOTICE OF COPYRIGHT                                                   //
 //                                                                       //
 // Book module                                                           //
-// Copyright (C) 2004-2010  Petr Skoda (http://skodak.org)               //
+// Copyright (C) 2004-2011  Petr Skoda (http://skodak.org)               //
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 //                                                                       //
@@ -23,7 +23,7 @@ $Id$
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 
-Book module for Moodle - version 1.5 (stable release)
+Book module for Moodle - version 1.9.1 (stable release)
 ===============================================================================
 Created by:
       Petr Skoda (skodak) - most of the coding & design
@@ -32,10 +32,14 @@ Created by:
 Developed for Technical University of Liberec (Czech Republic).
 Many ideas and code were taken from other Moodle modules and Moodle itself;-)
 
-Installation:
-    * see http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
+Project page:
+    * https://github.com/skodak/moodle-mod_book
+    * http://moodle.org/plugins/view.php?plugin=mod_book
 
-List of features - version 1.9:
+Installation:
+    * http://docs.moodle.org/19/en/Installing_contributed_modules_or_plugins
+
+List of features - version 1.9.1:
 
     * easy to use - new teachers can quickly create multipage study materials
     * two levels - only chapters and subchapters
@@ -117,5 +121,7 @@ CHANGELOG:
     * fixed print icons
     * implemented user outline
     * fixed page title formatting
+== 1.9.1 2011/10/09 ============================================================
+    * fixed chapter linking in backup/restore
 
 skodak
