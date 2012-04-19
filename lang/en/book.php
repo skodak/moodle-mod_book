@@ -30,7 +30,7 @@ $string['modulenameplural'] = 'Books';
 $string['modulename_help'] = 'Book is a simple multipage study material.';
 $string['pluginname'] = 'Book';
 $string['pluginadministration'] = 'Book administration';
-
+$string['book:addinstance'] = 'Add a new book';
 $string['toc'] = 'Table of contents';
 $string['faq'] = 'Book FAQ';
 $string['faq_help'] = '
