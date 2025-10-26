@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> There is finally a new improved version of book module, see [Interactive book for Moodle™ LMS](https://github.com/mutms/moodle-mod_mubook).
+
+---
+
 Book module for Moodle (http://moodle.org/) - Copyright (C) 2004-2011  Petr Skoda (http://skodak.org/)
 
 The Book module makes it easy to create multi-page resources with a book-like format. This module can be used to build complete book-like websites inside of your Moodle course.
